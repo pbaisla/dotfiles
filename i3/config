@@ -100,8 +100,8 @@ set $workspace5 "5. "
 set $workspace6 "6. "
 set $workspace7 "7. "
 set $workspace8 "8"
-set $workspace9 "9"
-set $workspace10 "10. "
+set $workspace9 "9. "
+set $workspace10 "10. "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -243,11 +243,14 @@ assign [class="Vlc"] $workspace4
 assign [class="chromium"] $workspace5
 assign [class="Subl3"] $workspace6
 assign [class="Gimp"] $workspace7
-assign [class="feh"] $workspace10
+assign [class="feh"] $workspace9
+assign [class="stats"] $workspace10
 
 # Open apps
 exec_always feh --bg-scale --randomize ~/Downloads/Wallpapers
 exec compton -f
 exec firefox
 exec termite
+exec termite
 exec clementine
+exec termite -e htop --class stats
