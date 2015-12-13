@@ -211,7 +211,8 @@ bindsym F3 exec xbacklight + 10
 bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'
 
 # POWER OPTIONS
-set $Locker i3lock -fi ~/Downloads/Wallpapers/Wallpaper.jpg && sleep 1
+# set $Locker scrot ~/.i3/lock.png -e 'convert $f -resize 1% -| convert - -resize 10000% $f && i3lock -ui $f'
+set $Locker ~/.i3/locki3/locki3
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
