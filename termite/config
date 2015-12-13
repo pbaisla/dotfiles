@@ -1,0 +1,114 @@
+[options]
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = true
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+font = Monospace 9
+scrollback_lines = 1000
+search_wrap = true
+#icon_name = terminal
+#geometry = 640x480
+
+# "system", "on" or "off"
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# $BROWSER is used by default
+browser = firefox
+
+# set size hints for the window
+#size_hints = false
+
+# emit escape sequences for other keys modified by Control
+#modify_other_keys = false
+
+#[colors]
+##cursor = #dcdccc
+#foreground = #dcdccc
+#foreground_bold = #ffffff
+##background = #3f3f3f
+#background = #121212
+#
+## 20% background transparency (requires a compositor)
+##background = rgba(63, 63, 63, 0.8)
+#
+## if unset, will reverse foreground and background
+#highlight = #2f2f2f
+#
+## colors from color0 to color254 can be set
+#color0 = #3f3f3f
+#color1 = #705050
+#color2 = #60b48a
+#color3 = #dfaf8f
+#color4 = #506070
+#color5 = #dc8cc3
+#color6 = #8cd0d3
+#color7 = #dcdccc
+#color8 = #709080
+#color9 = #dca3a3
+#color10 = #c3bf9f
+#color11 = #f0dfaf
+#color12 = #94bff3
+#color13 = #ec93d3
+#color14 = #93e0e3
+#color15 = #ffffff
+
+## NEW COLORS
+[colors]
+cursor = #FF8E31
+background = #030508
+highlight = #2f2f2f
+
+color0 = #19253E
+color8 = #304573
+
+#red
+color1 = #FF3131
+color9 = #FF6262
+
+#green
+color2 = #28D428
+color10 = #51D251
+
+#yellow
+color3 = #FF8E31
+color11 = #FFA962
+
+#blue
+color4 = #335BB8
+color12 = #5270B5
+
+#magenta
+color5 = #852BB7
+color13 = #904CB5
+
+#cyan
+color6 = #20A8A8
+color14 = #40A6A6
+
+#white -- symmetric to black
+#color7  = #4665A7
+#color15 =  #6895F4
+
+#white -- symmetric to blue
+color7  = #BDC6DA
+color15 = #D7DEED
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
+# vim: ft=dosini cms=#%s
