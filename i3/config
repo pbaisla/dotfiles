@@ -8,7 +8,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:System San Francisco Display 8
+font pango:Monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -167,13 +167,13 @@ bar {
 	position top
 	font pango:FontAwesome 10, Monospace 10
   colors {
-    separator #666666
-    background #222222
-    statusline #dddddd
-    focused_workspace #0088CC #0088CC #ffffff
+    separator #79757E
+    background #303533
+    statusline #D7DEED
+    focused_workspace #333333 #904CB5 #ffffff
     active_workspace #333333 #333333 #ffffff
     inactive_workspace #333333 #333333 #888888
-    urgent_workspace #2f343a #900000 #ffffff
+    urgent_workspace #2f343a #FF8E31 #ffffff
   }
 }
 
@@ -210,14 +210,19 @@ bindsym F3 exec xbacklight + 10
 # SCREENSHOT
 bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'
 
+# SCRATCHPAD
+bindsym $mod+Shift+x scratchpad show
+bindsym $mod+x move scratchpad
+
 # POWER OPTIONS
 # set $Locker scrot ~/.i3/lock.png -e 'convert $f -resize 1% -| convert - -resize 10000% $f && i3lock -ui $f'
 set $Locker ~/.i3/locki3/locki3
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l)ock, l(o)gout, (s)uspend, (h)ibernate, (r)eboot, (S)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym o exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
@@ -230,10 +235,25 @@ mode "$mode_system" {
 
 bindsym $mod+Escape mode "$mode_system"
 
-client.focused #0088CC #0088CC #ffffff #dddddd
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused #333333 #333333 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+#client.focused #0088CC #0088CC #ffffff #dddddd
+#client.focused_inactive #333333 #333333 #888888 #292d2e
+#client.unfocused #333333 #333333 #888888 #292d2e
+#client.urgent #2f343a #900000 #ffffff #900000
+
+client.focused          #852BB7 #904CB5 #FFFFFF #2e9ef4
+client.focused_inactive #6E686F #6E686F #D7DEED #292d2e
+client.unfocused        #6E686F #6E686F #D7DEED #292d2e
+client.urgent           #FFA962 #FF8E31 #121212 #900000
+client.placeholder      #000000 #0c0c0c #FFFFFF #000000
+
+#client.focused          #849492 #849492 #ffffff #2e9ef4
+#client.focused_inactive #6e686f #6e686f #ffffff #484e50
+#client.unfocused        #6e686f #6e686f #888888 #292d2e
+#client.urgent           #e9e6e6 #BFB8B0 #ffffff #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000
+
+#client.focused               #707090 #50506F #EEEEEE
+#client.focused_inactive #333333 #5F676A #EEEEEEi
 
 # Assign apps
 assign [class="Firefox"] $workspace1
@@ -247,8 +267,8 @@ assign [class="feh"] $workspace9
 assign [class="stats"] $workspace10
 
 # Open apps
-exec_always feh --bg-scale --randomize ~/Downloads/Wallpapers
-exec compton -f
+exec_always feh --bg-fill --randomize ~/Downloads/Wallpapers --no-fehbg
+exec compton -cf
 exec firefox
 exec termite
 exec termite

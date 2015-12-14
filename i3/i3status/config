@@ -9,9 +9,9 @@
 general {
     colors = true
     interval = 5
-    color_good = '#11dd66'
-    color_degraded = '#ff8811'
-    color_bad = '#ff2255'
+    color_good = '#51D251'
+    color_degraded = '#FFA962'
+    color_bad = '#FF3131'
 }
 
 #order += "ipv6"
@@ -64,7 +64,7 @@ run_watch VPN {
 }
 
 tztime local {
-    format = " %Y-%m-%d %H:%M:%S"
+    format = "  %b %d %H:%M"
 }
 
 load {

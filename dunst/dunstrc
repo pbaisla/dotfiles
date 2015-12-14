@@ -64,7 +64,7 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-40+30"
+    geometry = "400x5-40+30"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -114,7 +114,7 @@
     # Draw a line of "separatpr_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 5
+    separator_height = 2
 
     # Padding between text and separator.
     padding = 8
@@ -149,7 +149,7 @@
 
 [frame]
     width = 3
-    color = "#19253E"
+    color = "#335BB8"
 
 [shortcuts]
 
@@ -180,12 +180,12 @@
     timeout = 15
 
 [urgency_normal]
-    background = "#5270B5"
+    background = "#51D251"
     foreground = "#000000"
     timeout = 30
 
 [urgency_critical]
-    background = "#FF6262"
+    background = "#FF8E31"
     foreground = "#000000"
     timeout = 0
 
