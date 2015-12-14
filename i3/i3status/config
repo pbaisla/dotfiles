@@ -40,6 +40,7 @@ ethernet _first_ {
 battery 0 {
     format = " %status %percentage %remaining"
     path = "/sys/class/power_supply/BAT1/uevent"
+    last_full_capacity = true
 }
 
 volume master {

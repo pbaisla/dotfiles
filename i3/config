@@ -86,10 +86,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+q focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+a focus child
 
 # workspace variables
 set $workspace1 "1. "
@@ -233,7 +233,8 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Escape mode "$mode_system"
+bindsym $mod+Escape exec ~/.i3/scripts/llshrse.sh
+bindsym $mod+Shift+Escape mode "$mode_system"
 
 #client.focused #0088CC #0088CC #ffffff #dddddd
 #client.focused_inactive #333333 #333333 #888888 #292d2e
