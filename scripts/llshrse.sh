@@ -2,9 +2,10 @@
 # Lock Logout Suspend Hibernate Restart Shutdown Exit
 
 kill_lemonbar() {
-  kill `pgrep -n lemonbar`
+  pkill -n lemonbar
 }
 
+if ! kill_lemonbar; then
 echo "%{c} \
   %{A:lock:}Lock%{A} \
   %{A:logout:}Logout%{A} \
@@ -45,3 +46,4 @@ echo "%{c} \
     exit
 
   done
+fi
