@@ -1,0 +1,6 @@
+Host github.com
+User git
+Port 443
+Hostname ssh.github.com
+ProxyCommand /usr/bin/corkscrew 172.31.100.30 3128 %h %p ~/.ssh/authfile
+IdentityFile ~/.ssh/id_rsa
