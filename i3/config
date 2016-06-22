@@ -37,8 +37,8 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "#2f343f" -bg "#2f343f" -fg "#f3f4f5" -hlbg "#2f343f" -hlfg "#9575cd" -font "System San Francisco Display 18"
-bindsym $mod+t exec rofi -show window -lines 3 -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -bc "#2f343f" -bg "#2f343f" -fg "#f3f4f5" -hlbg "#2f343f" -hlfg "#9575cd" -font "System San Francisco Display 18"
+bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -font "System San Francisco Display 18"
+bindsym $mod+t exec rofi -show window -lines 3 -eh 2 -width 100 -padding 300 -opacity "85" -bw 0 -font "System San Francisco Display 18"
 
 
 # change focus
@@ -233,8 +233,8 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Escape exec ~/.i3/scripts/llshrse.sh
-bindsym $mod+Shift+Escape mode "$mode_system"
+bindsym $mod+Shift+Escape exec ~/.i3/scripts/llshrse.sh
+bindsym $mod+Escape mode "$mode_system"
 
 #client.focused #0088CC #0088CC #ffffff #dddddd
 #client.focused_inactive #333333 #333333 #888888 #292d2e
@@ -272,6 +272,6 @@ exec_always feh --bg-fill --randomize ~/Downloads/Wallpapers --no-fehbg
 exec compton -cf
 exec firefox
 exec termite
-exec termite
+exec termite -e ranger
 exec clementine
 exec termite -e htop --class stats
